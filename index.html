@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Load polyfills. Same as 2.x, except for the path -->
+    <script
+        src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js">
+    </script> 
+	<script type="module" src="src/header.js"></script>
+	<script type="module" src="src/sidenav.js"></script>
+	<script type="module" src="src/content.js"></script>
+	<script type="module" src="src/footer.js"></script>
+	
+	
+	<style>
+	html, body { height: 100%; width: 100%; margin: 0; }
+	.header,.footer{ 
+		background: #000;
+		color: #fff;
+		width: 100%;
+		height: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	} 
+	.sidenav{ 
+		background: #999999;
+		height:60%;
+		width:30%;
+		flex-grow: 0;
+		display:inline-block;
+	} 
+	.content{
+		background: #EEEEEE;
+		height:60%; 
+		min-width:69%;
+		flex-grow: 1000;
+		display:inline-block;
+	}
+	</style>
+  </head>
+  <body>
+     
+	<header-page class='header'></header-page>
+	<side-nav  class='sidenav'></side-nav>
+	<content-page  class='content'></content-page>
+	<footer-page class='footer'></footer-page>
+  </body>
+</html>
